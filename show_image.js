@@ -1,22 +1,9 @@
-const imageDictPath = 'question/';
-const ansDictPath = 'answer/';
+const imagePath = "assets/"
 
-var currImageId=-1;
-var images=[
-    "为什么要弹春日影.png",
-    "但是我拒绝！.png",
-    "你是我的master吗.png",
-    "其他人做得到吗！.png",
-    "在虚拟的故事当中寻求真实感的人脑袋一定有问题.png",
-    "成为魔法少女吧.png",
-    "我打宿傩，真的假的.png",
-    "所以，不要停下来啊.png",
-    "真相只有一个.png"
-];
+var currImageId = -1;
+var questions = database["questionLists"];
 
-
-var totalImages = images.length;
-    
+var total = questions.length;
 
 document.getElementById('showRandomImage').addEventListener('click', function () {
     showRandomImage();
@@ -28,19 +15,17 @@ document.getElementById('showAnswer').addEventListener('click', function(){
 
 function showRandomImage(){
     randomImageId();
-    let randomImageSrc = imageDictPath + images[currImageId];
+    let randomImageSrc = imagePath + questions[currImageId]["image"];
     document.getElementById("currentImage").src = randomImageSrc;
 }
 
 function showAnswer(){
-    let answerImageSrc = ansDictPath + images[currImageId];
-    document.getElementById("currentImage").src = answerImageSrc;
 }
 
 function randomImageId(){ 
     let newId = -1;
     do{
-        newId = Math.floor(Math.random() * totalImages); 
+        newId = Math.floor(Math.random() * total); 
     }while (newId == currImageId)
     currImageId = newId;
 } 
