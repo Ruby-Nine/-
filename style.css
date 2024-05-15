@@ -16,6 +16,8 @@
 }
 
 #currentImage {
+  align-items: center;
+  justify-content: center;
   max-width: 720px;
   max-height: 480px;
   object-fit: contian;
