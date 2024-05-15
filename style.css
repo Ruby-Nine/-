@@ -10,8 +10,6 @@
   width: 720px;
   height: 480px;
   border: 1px solid black;
-  position: fixed;
-  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +21,12 @@
   object-fit: contian;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
+#button {
+  padding: 20px 40px;
+  font-size: 32px;
+}
+
+#title {
+  font-size: 64px;
+  color: orange;
 }
