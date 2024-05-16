@@ -10,6 +10,10 @@ const hintBox = document.getElementById("hint");
 document.getElementById('showRandomImage').addEventListener('click', function () {
     showRandomImage()
 });
+document.getElementById('currentImage').onload = function () {
+    document.getElementById("showRandomImage").setAttribute("aria-busy", false);
+    document.getElementById("showRandomImage").innerHTML = "随机选取图片";
+};
 document.getElementById('showHint').addEventListener('click', function(){
     showHint();
 });
@@ -27,6 +31,8 @@ function showRandomImage(){
         randomImageId();
     }
     let randomImageSrc = imagePath + questions[currImageId]["image"];
+    document.getElementById("showRandomImage").setAttribute("aria-busy", true);
+    document.getElementById("showRandomImage").innerHTML = "加载中...";
     document.getElementById("currentImage").src = randomImageSrc;
     // document.getElementById("hint").value = "";
     // document.getElementById("origin").value = "";
