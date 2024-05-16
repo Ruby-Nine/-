@@ -5,6 +5,7 @@ var questions = database["questionLists"];
 
 var total = questions.length;
 var difficulty = "";
+const hintBox = document.getElementById("hint");
 
 document.getElementById('showRandomImage').addEventListener('click', function () {
     showRandomImage()
@@ -30,18 +31,21 @@ function showRandomImage(){
     // document.getElementById("hint").value = "";
     // document.getElementById("origin").value = "";
     // document.getElementById("answer").value = "";
+    hintBox.innerHTML = "";
 }
 
 function showHint(){
     let hint = questions[currImageId]["hint"];
     // document.getElementById("hint").value = hint;
-    alert(hint);
+    // alert(hint);
+    hintBox.innerHTML = hint;
 }
 
 function showOrigin(){
     let origin = questions[currImageId]["origin"];
     // document.getElementById("origin").value = origin;
-    alert(origin);
+    // alert(origin);
+    hintBox.innerHTML = origin;
 }
 
 function showAnswer(){
@@ -49,8 +53,9 @@ function showAnswer(){
     // showOrigin();
     let origin = questions[currImageId]["origin"];
     let answer = questions[currImageId]["answer"];
-    alert("出处：" + origin + "\n" + answer);
+    // alert("出处：" + origin + "\n" + answer);
     // document.getElementById("answer").value = answer;
+    hintBox.innerHTML = "《" + origin + "》: " + answer;
 }
 
 function randomImageId(){ 

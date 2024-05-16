@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>随机图片生成器</title>
     <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
   </head>
   <body>
-    <div class="container">
-      <div id="title"> 二次元名场景与名台词 </div>
-      <div id="imageBox">
-        <img id="currentImage" src="assets/logo.jpg" alt="Random Image">
+    <div class="page">
+      <div class="titleBox">
+        <div id="title"> 二次元名场景与名台词 </div>
       </div>
-      <button id="showRandomImage">随机选取图片</button>
-      <!-- <div>
-        <button id="showHint">提示</button>
-        <input type="text" id="hint" value="", readonly>
-      </div>
-      <div>
-      <div>
-        <button id="showOrigin">作品</button>
-        <input type="text" id="origin" value="", readonly>
-      </div>
-        <button id="showAnswer">答案</button>
-        <input type="text" id="answer" value="", readonly>
-      </div> -->
-      <div>
-        <button id="showHint">提示</button>
-        <button id="showOrigin">作品</button>
-        <button id="showAnswer">答案</button>
+      <div class="mainBody">
+
+        <div class="control">
+          <button id="showRandomImage">随机选取图片</button>
+          <button id="showHint">提示</button>
+          <button id="showOrigin">作品</button>
+          <button id="showAnswer">答案</button>
+        </div>
+
+        <div id="imageBox">
+          <img id="currentImage" src="assets/logo.jpg" alt="Random Image">
+          <p id="hint">Welcome</p>
+        </div>
+        
       </div>
     </div>
     <script src="database.js"></script>
