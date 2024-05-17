@@ -45,7 +45,7 @@ var database =
             "difficulty": "easy",
             "image": "005-easy.gif",
             "answer": "为什么要演奏春日影！",
-            "hint": "不属于crythic的OOO",
+            "hint": "不属于crythic的春日影",
             "origin": "Bang Dream! It's MYGO!!!!!"
         },
         {
@@ -84,7 +84,7 @@ var database =
             "id": "010",
             "difficulty": "normal",
             "image": "010-normal.gif",
-            "answer": "你是我的master吗？",
+            "answer": "你就是我的master吗?",
             "hint": "saber",
             "origin": "Fate/Stay Night"
         },
@@ -109,7 +109,7 @@ var database =
             "difficulty": "hard",
             "image": "013-hard.gif",
             "answer": "教练，我想打篮球",
-            "hint": "表达了对动画题材的热爱（？）",
+            "hint": "已经演化成想做什么东西的定型文了",
             "origin": "灌篮高手"
         },
         {
@@ -149,8 +149,112 @@ var database =
             "difficulty": "normal",
             "image": "018-normal.png",
             "answer": "异议！",
-            "hint": "一斤鸭梨",
+            "hint": "一斤鸭梨(空耳)",
             "origin": "逆转裁判"
+        },
+        {
+            "id": "019",
+            "difficulty": "easy",
+            "image": "019-easy.jpg",
+            "answer": "会赢的",
+            "hint": "胜 利 宣 言",
+            "origin": "咒术回战"
+        },
+        {
+            "id": "020",
+            "difficulty": "easy",
+            "image": "020-easy.gif",
+            "answer": "战斗力只有5的渣渣",
+            "hint": "战斗力梗出处",
+            "origin": "龙珠Z"
+        },
+        {
+            "id": "021",
+            "difficulty": "hard",
+            "image": "021-hard.gif",
+            "answer": "你敢反抗拥有巴耶力的我吗",
+            "hint": "你敢反抗拥有OOO的我吗",
+            "origin": "机动战士高达 铁血的奥尔芬斯"
+        },
+        {
+            "id": "022",
+            "difficulty": "normal",
+            "image": "022-normal.gif",
+            "answer": "要动手吗？现在，就在这里！",
+            "hint": "他超我铠，他踢我撞,你跟我走,啥事沒有",
+            "origin": "进击的巨人"
+        },
+        {
+            "id": "023",
+            "difficulty": "hard",
+            "image": "023-hard.gif",
+            "answer": "你们都是我的翅膀",
+            "hint": "呼吸宣言（现在已经变成开后宫时的梗了）",
+            "origin": "超时空要塞F"
+        },
+        {
+            "id": "024",
+            "difficulty": "easy",
+            "image": "024-easy.jpg",
+            "answer": "那天，人类回忆起了，被巨人支配的恐惧",
+            "hint": "经典开场白",
+            "origin": "进击的巨人"
+        },
+        {
+            "id": "025",
+            "difficulty": "normal",
+            "image": "025-normal.gif",
+            "answer": "神罗天征",
+            "hint": "辛辣(空耳）",
+            "origin": "火影忍者"
+        },
+        {
+            "id": "026",
+            "difficulty": "easy",
+            "image": "026-easy.gif",
+            "answer": "你什么时候开始产生了我没有使用镜花水月的错觉",
+            "hint": "你为什么会有这种错觉",
+            "origin": "死神"
+        },
+        {
+            "id": "027",
+            "difficulty": "hard",
+            "image": "027-hard.gif",
+            "answer": "想死一次试试吗",
+            "hint": "阎魔爱处刑句式",
+            "origin": "地狱少女"
+        },
+        {
+            "id": "028",
+            "difficulty": "hard",
+            "image": "028-hard.gif",
+            "answer": "爆裂吧现实,粉碎吧精神,放逐这个世界!",
+            "hint": "爆裂 粉碎 放逐",
+            "origin": "中二病也要谈恋爱"
+        },
+        {
+            "id": "029",
+            "difficulty": "normal",
+            "image": "029-normal.gif",
+            "answer": "能哭的地方，只有厕所和爸爸的怀里",
+            "hint": "能哭的地方，……",
+            "origin": "clannad"
+        },
+        {
+            "id": "030",
+            "difficulty": "hard",
+            "image": "030-hard.png",
+            "answer": "El Psy Kongroo",
+            "hint": "凶真经常对手机念出的无意义短语",
+            "origin": "命运石之门"
+        },
+        {
+            "id": "031",
+            "difficulty": "normal",
+            "image": "031-normal.gif",
+            "answer": "你唱歌太好听了吧",
+            "hint": "简直就是天籁！",
+            "origin": "Lovelive!Superstar!"
         }
     ]
 };
