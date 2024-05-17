@@ -29,6 +29,7 @@
   flex-direction: column;
   gap: 20px;
 }
+
 #imageBox {
   width: 720px;
   height: 480px;
@@ -43,9 +44,11 @@
 #currentImage {
   align-items: center;
   justify-content: center;
-  max-width: 720px;
-  max-height: 480px;
-  object-fit: contian;
+  /* max-width: 720px;
+  max-height: 480px; */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 #hint{
