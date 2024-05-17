@@ -4,8 +4,10 @@ var currImageId = -1;
 var questions = database["questionLists"];
 
 var total = questions.length;
-var difficulty = "";
+var difficulty = "normal";
+
 const hintBox = document.getElementById("hint");
+var image = document.getElementById("currentImage").src;
 
 document.getElementById('showRandomImage').addEventListener('click', function () {
     showRandomImage()
@@ -19,19 +21,30 @@ document.getElementById('showOrigin').addEventListener('click', function(){
 document.getElementById('showAnswer').addEventListener('click', function(){
     showAnswer();
 });
+document.getElementById('test').addEventListener('click', function(){
+    setImageId();
+});
+document.getElementById('changeDifficulty').addEventListener('click', function(){
+    changeDifficulty();
+})
 
 
 function showRandomImage(){
     randomImageId();
-    while(difficulty!="" && questions[currImageId]["difficulty"] != difficulty){
+    while(difficulty!="normal" && questions[currImageId]["difficulty"] != difficulty){
         randomImageId();
     }
-    let randomImageSrc = imagePath + questions[currImageId]["image"];
-    document.getElementById("currentImage").src = randomImageSrc;
-    // document.getElementById("hint").value = "";
-    // document.getElementById("origin").value = "";
-    // document.getElementById("answer").value = "";
-    hintBox.innerHTML = "";
+    showImage();
+}
+
+function changeDifficulty(){
+    if(difficulty=="normal"){
+        difficulty="easy";
+        document.getElementById('changeDifficulty').innerText="简单模式";
+    }else{
+        difficulty="normal";
+        document.getElementById('changeDifficulty').innerText="普通模式";
+    }
 }
 
 function showHint(){
@@ -65,3 +78,19 @@ function randomImageId(){
     }while (newId == currImageId)
     currImageId = newId;
 } 
+
+function setImageId(){
+    var newId = prompt("请输入图片id","");
+    newId -= 1;
+    currImageId = newId;
+    showImage();
+}
+
+function showImage(){
+    let randomImageSrc = imagePath + questions[currImageId]["image"];
+    document.getElementById("currentImage").src = randomImageSrc;
+    // document.getElementById("hint").value = "";
+    // document.getElementById("origin").value = "";
+    // document.getElementById("answer").value = "";
+    hintBox.innerHTML = "";
+}

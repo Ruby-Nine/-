@@ -143,6 +143,14 @@ var database =
             "answer": "我很好奇",
             "hint": "千反田对折木特攻code geass!",
             "origin": "冰菓"
+        },
+        {
+            "id": "018",
+            "difficulty": "normal",
+            "image": "018-normal.png",
+            "answer": "异议！",
+            "hint": "一斤鸭梨",
+            "origin": "逆转裁判"
         }
     ]
 };
