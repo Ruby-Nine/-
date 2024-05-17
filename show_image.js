@@ -88,9 +88,16 @@ function randomImageId(){
 
 function setImageId(){
     var newId = prompt("请输入图片id", currImageId);
-    newId -= 1;
-    currImageId = newId;
-    showImage();
+    if(newId == 0){
+        alert("init");
+        for(currImageId=0; currImageId<total; ++currImageId){
+            showImage();
+        }
+    }else{
+        newId -= 1;
+        currImageId = newId;
+        showImage();
+    }
 }
 
 function showImage(){
