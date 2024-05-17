@@ -30,7 +30,10 @@ document.getElementById('test').addEventListener('click', function(){
 });
 document.getElementById('changeDifficulty').addEventListener('click', function(){
     changeDifficulty();
-})
+});
+document.getElementById('about').addEventListener('click', function(){
+    about();
+});
 
 
 function showRandomImage(){
@@ -38,7 +41,6 @@ function showRandomImage(){
     while(difficulty!="normal" && questions[currImageId]["difficulty"] != difficulty){
         randomImageId();
     }
-<<<<<<< HEAD
     showImage();
 }
 
@@ -50,16 +52,6 @@ function changeDifficulty(){
         difficulty="normal";
         document.getElementById('changeDifficulty').innerText="普通模式";
     }
-=======
-    let randomImageSrc = imagePath + questions[currImageId]["image"];
-    document.getElementById("showRandomImage").setAttribute("aria-busy", true);
-    document.getElementById("showRandomImage").innerHTML = "加载中...";
-    document.getElementById("currentImage").src = randomImageSrc;
-    // document.getElementById("hint").value = "";
-    // document.getElementById("origin").value = "";
-    // document.getElementById("answer").value = "";
-    hintBox.innerHTML = "";
->>>>>>> 4d7de4bc2d463b7e8f7518349fca85887c3d20e4
 }
 
 function showHint(){
@@ -95,7 +87,7 @@ function randomImageId(){
 } 
 
 function setImageId(){
-    var newId = prompt("请输入图片id","");
+    var newId = prompt("请输入图片id", currImageId);
     newId -= 1;
     currImageId = newId;
     showImage();
@@ -108,4 +100,13 @@ function showImage(){
     // document.getElementById("origin").value = "";
     // document.getElementById("answer").value = "";
     hintBox.innerHTML = "";
+}
+
+function about(){
+    alert("\
+        主要负责人: Ruby\n\
+        网页制作: 西瓜 Ruby\n\
+        素材剪辑: 茶茶 Ruby\n\
+        素材收集：全体团子动漫社社员\
+    ");
 }
