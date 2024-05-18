@@ -195,7 +195,7 @@ var database =
         {
             "id": "024",
             "difficulty": "easy",
-            "image": "024-easy.jpg",
+            "image": "024-easy.gif",
             "answer": "那天，人类回忆起了，被巨人支配的恐惧",
             "hint": "经典开场白",
             "origin": "进击的巨人"
