@@ -109,7 +109,7 @@ function showImage(){
     // document.getElementById("hint").value = "";
     // document.getElementById("origin").value = "";
     // document.getElementById("answer").value = "";
-    hintBox.innerHTML = "";
+    hintBox.innerHTML = "猜台词！";
 }
 
 function about(){
