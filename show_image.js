@@ -81,18 +81,21 @@ function showAnswer(){
 function randomImageId(){ 
     let newId = -1;
     do{
-        newId = Math.floor(Math.random() * total); 
+        newId = Math.floor(Math.random() * (total-1)) + 1; 
     }while (newId == currImageId)
     currImageId = newId;
 } 
 
 function setImageId(){
     var newId = prompt("请输入图片id", currImageId);
-    if(newId == 0){
+    // magic number: 999 读取所有图片
+    if(newId == 999){
         alert("init");
-        for(currImageId=0; currImageId<total; ++currImageId){
+        for(currImageId=1; currImageId<total; ++currImageId){
             showImage();
         }
+        currImageId = 0;
+        showImage();
     }else{
         newId -= 1;
         currImageId = newId;

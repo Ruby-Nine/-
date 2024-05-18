@@ -1,13 +1,13 @@
 var database = 
 {
-    "index":{
-        "id": 0,
-        "image": "logo.jpg",
-        "answer": "团子动漫社",
-        "hint": "社团",
-        "origin": "清华大学"
-    },
     "questionLists":[
+        {
+            "id": "000",
+            "image": "logo.jpg",
+            "answer": "团子动漫社",
+            "hint": "社团",
+            "origin": "清华大学"
+        },
         {
             "id": "001",
             "difficulty": "easy",
