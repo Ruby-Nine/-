@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-/* 设置全局rem基准值为16px */
+/* 设置全局rem基准值为24px */
 html {
   font-size: 24px;
 }
@@ -38,7 +38,6 @@ header {
 .logo {
   color: #FF6F61;
   font-size: 5rem;
-  /* 40px = 2.5rem */
   font-weight: bold;
   text-shadow: 2px 2px #FFF;
   transition: transform 0.3s ease-in-out;
@@ -98,11 +97,11 @@ header {
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
+    opacity: 0;
   }
 
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -216,31 +215,89 @@ h1 {
   background-color: #CCC;
 }
 
+@media (max-width: 1280px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 480px) {
+  html {
+    font-size: 10px;
+  }
+  .container { 
+    padding: 0 4rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .menu a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-height: 480px) {
+  .container { 
+    padding: 0 6rem;
+  }
+}
+
+@media (max-width: 768px) and (max-aspect-ratio: 1) {
+  html {
+    font-size: 12px;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  .menu a {
+    font-size: 1.5rem;
+  }
+
   .container {
-      padding: 0 2rem;
+    padding: 0 2rem;
   }
 
   .content-container {
-      flex-direction: column;
-      padding: 0;
+    flex-direction: column;
+    padding: 0;
   }
 
   .content-left {
-      padding-right: 0;
-      margin-bottom: 1rem;
+    padding-right: 0;
+    margin-bottom: 1rem;
   }
 
-  .button-secondary-group {
-      flex-direction: column;
-      gap: 0;
+  .warning {
+    min-height: min(40vw,20vh);
+    font-size: 1.5rem;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+    background-color: #FF9068;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 10px;
   }
 }
 
 @media (min-width: 2000px) and (min-aspect-ratio: 16/9) {
   .container {
-      width: 100%;
-      max-width: 2000px;
-      margin: auto;
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
   }
 }
