@@ -1,62 +1,246 @@
-.page {
+* {
+  box-sizing: border-box;
+}
+
+/* 设置全局rem基准值为16px */
+html {
+  font-size: 24px;
+}
+
+body {
+  font-family: "Comic Sans MS", "Noto Sans", sans-serif;
+  background: linear-gradient(135deg, #ffe0e5, #a0c9ff);
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
 }
 
-.titleBox{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 15vh;
-}
-.mainBody{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  height: 85vh;
-}
-
-
-.control{
-  width: 200px;
+.container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  width: 100%;
+  max-width: 100rem;
+  margin: auto;
+  padding: 1rem 2rem;
 }
 
-#imageBox {
-  width: 720px;
-  height: 480px;
-  /* border: 1px solid black; */
+header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
+  border-bottom: 0.0625rem solid #EEEFF2;
+  padding: 0.5rem 0;
+  user-select: none;
 }
 
-#currentImage {
-  align-items: center;
-  justify-content: center;
-  /* max-width: 720px;
-  max-height: 480px; */
-  width: 90%;
-  height: 90%;
+.logo {
+  color: #FF6F61;
+  font-size: 5rem;
+  /* 40px = 2.5rem */
+  font-weight: bold;
+  text-shadow: 2px 2px #FFF;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: rotate(-10deg);
+}
+
+.menu {
+  display: flex;
+}
+
+.menu a {
+  color: #FF6F61;
+  text-decoration: none;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s, transform 0.2s;
+  font-size: 2rem;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* 给菜单链接增加动画效果 */
+.menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #FF6F61;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a:hover {
+  color: #FFF;
+  transform: scale(1.1);
+}
+
+.video-container {
+  background-color: #FFF5E1;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+/* 新增 img 元素并使其适应父容器 */
+.video-container img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  border-radius: inherit;
 }
 
-#hint{
-  height: 80px;
-  color: orange;
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 0;
 }
 
-#title {
-  font-size: 64px;
-  color: orange;
+.content-left {
+  flex: 2;
+  padding-right: 1.25rem;
+}
+
+.content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #1C1D22;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.75rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  height: 6rem;
+  user-select: none;
+}
+
+/* 按钮的动画和悬停效果 */
+.button:hover {
+  transform: scale(1.1) rotate(3deg);
+  background-color: #FF9068;
+}
+
+.button-primary {
+  background-color: #FF6F61;
+  color: #FFF;
+}
+
+.button-secondary-group {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.button-secondary {
+  background-color: #FFF5E1;
+  color: #FF6F61;
+  flex: 1;
+  /* height: 3.5rem; */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  text-align: center;
+  color: #FFF;
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.warning {
+  background-color: #FFF5E1;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  /* justify-content: space-between; */
+  font-size: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  flex: 1;
+  /* 新增此行以填充剩余空间 */
+  align-items: center;
+}
+
+.warning-text {
+  flex: 1
+}
+
+
+.warning-text p {
+  margin: 0;
+  color: #FF6F61;
+  font-weight: bold;
+  text-align: center;
+}
+
+.warning img {
+  flex: 1;
+  border-radius: 1rem;
+  aspect-ratio: 16/9;
+  background-color: #CCC;
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 0 2rem;
+  }
+
+  .content-container {
+      flex-direction: column;
+      padding: 0;
+  }
+
+  .content-left {
+      padding-right: 0;
+      margin-bottom: 1rem;
+  }
+
+  .button-secondary-group {
+      flex-direction: column;
+      gap: 0;
+  }
+}
+
+@media (min-width: 2000px) and (min-aspect-ratio: 16/9) {
+  .container {
+      width: 100%;
+      max-width: 2000px;
+      margin: auto;
+  }
 }
